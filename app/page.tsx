@@ -6,6 +6,8 @@ import { button as buttonStyles } from "@nextui-org/theme";
 import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
 import { GithubIcon } from "@/components/icons";
+import { Card_Edu } from "@/components/card-edu";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -31,6 +33,14 @@ export default function Home() {
         >
           Chat With Us
         </Link>
+      </div>
+      <div className="grid grid-cols-2 grid-flow-col overflow-x-auto gap-4">
+        <Card_Edu />
+        <Card_Edu />
+        <Card_Edu />
+        <Card_Edu />
+        <Card_Edu />
+        <Card_Edu />
       </div>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dignissim
       velit in auctor scelerisque. Mauris ullamcorper, quam at convallis
