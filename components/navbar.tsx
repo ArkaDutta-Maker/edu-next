@@ -81,8 +81,8 @@ export const Navbar = () => {
               if (isMenuOpen) setIsMenuOpen();
             }}
           >
-            <Logo />
-            <p className="font-bold text-inherit">ACME</p>
+            {/* <Logo /> */}
+            <p className="font-bold text-inherit">Edu-Next</p>
           </NextLink>
         </NavbarBrand>
         <ul className="hidden lg:flex gap-4 justify-start ml-2">
