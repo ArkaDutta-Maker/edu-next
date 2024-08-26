@@ -8,7 +8,8 @@ import { title, subtitle } from "@/components/primitives";
 import { GithubIcon } from "@/components/icons";
 import { Card_Edu } from "@/components/card-edu";
 import Image from "next/image";
-
+import CarouselCustom from "@/components/carousel-custom";
+import { color } from "framer-motion";
 export default function Home() {
   return (
     <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
@@ -34,13 +35,19 @@ export default function Home() {
           Chat With Us
         </Link>
       </div>
-      <div className="grid grid-cols-2 grid-flow-col overflow-x-auto gap-4">
-        <Card_Edu />
-        <Card_Edu />
-        <Card_Edu />
-        <Card_Edu />
-        <Card_Edu />
-        <Card_Edu />
+      <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
+      <div className="flex flex-col items-center justify-center">
+        {" "}
+        <h1 className={title({ color: "violet", underline: true })}>
+          {" "}
+          Our Courses
+        </h1>
+        <h2 className={subtitle({ class: "mt-4" })}>
+          Next Level Courses to take you to the next level
+        </h2>
+      </div>
+      <div className="container mx-auto py-3">
+        <CarouselCustom children={<Card_Edu />} count={3} />
       </div>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dignissim
       velit in auctor scelerisque. Mauris ullamcorper, quam at convallis
@@ -90,7 +97,6 @@ export default function Home() {
       Suspendisse tempor sapien in sapien consequat lacinia. Nunc non justo quis
       leo finibus faucibus. Vivamus eleifend vehicula tellus id vulputate.
       Vestibulum eu ex vulputate, efficitur nisi eu, egestas dolor.
-      <div className="mt-8"></div>
     </section>
   );
 }

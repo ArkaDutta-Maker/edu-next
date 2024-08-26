@@ -4,7 +4,7 @@ export const title = tv({
   base: "tracking-tight inline font-semibold",
   variants: {
     color: {
-      violet: "from-[#FF1CF7] to-[#b249f8]",
+      violet: "from-[#FF1CF7] to-[#b249f8] ",
       yellow: "from-[#FF705B] to-[#FFB457]",
       blue: "from-[#5EA2EF] to-[#0072F5]",
       cyan: "from-[#00b7fa] to-[#01cfea]",
@@ -20,6 +20,9 @@ export const title = tv({
     fullWidth: {
       true: "w-full block",
     },
+    underline: {
+      true: "underline underline-offset-4 decoration-4 decoration-[#b249f6]",
+    }
   },
   defaultVariants: {
     size: "md",
@@ -35,7 +38,7 @@ export const title = tv({
         "pink",
         "foreground",
       ],
-      class: "bg-clip-text text-transparent bg-gradient-to-b",
+      class: "bg-clip-text text-transparent bg-gradient-to-b ",
     },
   ],
 });
