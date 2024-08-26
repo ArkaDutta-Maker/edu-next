@@ -4,6 +4,7 @@ import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/card";
 import { Image } from "@nextui-org/image";
 import { Link } from "@nextui-org/link";
 import { Divider } from "@nextui-org/divider";
+import { Button } from "@nextui-org/button";
 export const Card_Edu = () => {
   return (
     <Card className="shadow-md">
@@ -25,15 +26,20 @@ export const Card_Edu = () => {
         <Image
           alt="Card background"
           className="object-scale-down rounded-xl"
-          src="https://nextui.org/images/hero-card-complete.jpeg"
+          src="https://media.istockphoto.com/id/1353769234/photo/training-and-skill-development-concept-with-icons-of-online-course-conference-seminar-webinar.jpg?b=1&s=612x612&w=0&k=20&c=1HIqyEn7_T6-WMcNGxdv9CN45tb_FUp-eqZf9kG6G8A="
           width="100%"
         />
       </CardBody>
       <Divider />
       <CardFooter>
-        <Link showAnchorIcon href="/#">
-          Course Details
-        </Link>
+        <div className="flex justify-between items-center gap-3 w-full">
+          <Button color="primary" size="md" as={Link} href="/1" isExternal>
+            Apply Now!
+          </Button>
+          <Link showAnchorIcon href="/#">
+            Course Details
+          </Link>
+        </div>
       </CardFooter>
     </Card>
   );

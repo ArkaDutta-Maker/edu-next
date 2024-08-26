@@ -9,7 +9,22 @@ import { GithubIcon } from "@/components/icons";
 import { Card_Edu } from "@/components/card-edu";
 import Image from "next/image";
 import CarouselCustom from "@/components/carousel-custom";
+import CarouselCustomNoAutoplay from "@/components/carousel-with-no-autoplay";
 import { color } from "framer-motion";
+import { Card_Test } from "@/components/card-testimonial";
+import { Button } from "@nextui-org/button";
+import { Card_About } from "@/components/card-about";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 export default function Home() {
   return (
     <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
@@ -22,18 +37,47 @@ export default function Home() {
           Innovative, intruiging, and interactive learning platform
         </h2>
       </div>
-      <div className="flex gap-3">
-        <Link
-          className={buttonStyles({
-            color: "primary",
-            radius: "full",
-            variant: "shadow",
-            size: "lg",
-          })}
-          href="/#"
-        >
-          Chat With Us
-        </Link>
+      <div className="my-3 justify-start">
+        <Dialog>
+          <DialogTrigger asChild>
+            <Button color="primary" size="lg">
+              Chat With Us
+            </Button>
+          </DialogTrigger>
+          <DialogContent className="items-start sm:max-w-[425px]">
+            <DialogHeader>
+              <DialogTitle>Chat With Us</DialogTitle>
+              <DialogDescription>
+                Enter your details and we will get back to you
+              </DialogDescription>
+            </DialogHeader>
+            <div className="grid gap-4 py-4">
+              <div className="grid grid-cols-4 items-center gap-4">
+                <Label htmlFor="name" className="text-right">
+                  Name
+                </Label>
+                <Input
+                  id="name"
+                  className="col-span-3"
+                  placeholder="Enter your Name"
+                />
+              </div>
+              <div className="grid grid-cols-4 items-center gap-4">
+                <Label htmlFor="username" className="text-right">
+                  Email Address
+                </Label>
+                <Input
+                  id="username"
+                  className="col-span-3"
+                  placeholder="Enter your Email Address"
+                />
+              </div>
+            </div>
+            <DialogFooter>
+              <Button type="submit">Save changes</Button>
+            </DialogFooter>
+          </DialogContent>
+        </Dialog>
       </div>
       <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
       <div className="flex flex-col items-center justify-center">
@@ -47,10 +91,59 @@ export default function Home() {
         </h2>
       </div>
       <div className="container md:p-10">
-        <CarouselCustom children={<Card_Edu />} count={5} />
+        <CarouselCustomNoAutoplay
+          children={<Card_Edu />}
+          count={5}
+          showArrows_val={true}
+          loop_val={true}
+        />
       </div>
-      <div className="container">
-        <p>
+      <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
+      <div className="flex flex-col items-center justify-center">
+        {" "}
+        <h1 className={title({ color: "violet", underline: true })}>
+          {" "}
+          Testimonials
+        </h1>
+        <h2 className={subtitle({ class: "mt-4" })}>
+          What Our students have to say
+        </h2>
+      </div>
+      <div className="container md:p-10">
+        <CarouselCustom children={<Card_Test />} val={2000} count={5} />
+      </div>
+      <Button
+        as={Link}
+        color="secondary"
+        size="lg"
+        showAnchorIcon
+        isExternal
+        variant="ghost"
+        href="/#"
+      >
+        View More Success Stories
+      </Button>
+      <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
+      <div className="flex flex-col items-center justify-center">
+        {" "}
+        <h1 className={title({ color: "violet", underline: true })}>
+          {" "}
+          Our Team
+        </h1>
+        <h2 className={subtitle({ class: "mt-4" })}>
+          Meet the team behind Edu-Next
+        </h2>
+      </div>
+      <div className="container md:mx-3 scale-96">
+        <CarouselCustomNoAutoplay
+          children={<Card_About />}
+          count={3}
+          showArrows_val={false}
+          loop_val={true}
+        />
+      </div>
+      <div className="container md:mx-3">
+        <p className="ml-4 md:ml-9 text-justify ">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
           dignissim velit in auctor scelerisque. Mauris ullamcorper, quam at
           convallis faucibus, magna augue commodo urna, id volutpat tellus ante
@@ -61,47 +154,7 @@ export default function Home() {
           Orci varius natoque penatibus et magnis dis parturient montes,
           nascetur ridiculus mus. Vestibulum suscipit purus eleifend nibh
           rhoncus elementum. Suspendisse magna tortor, luctus vitae tristique
-          sed, lacinia eu quam. Suspendisse ac eleifend turpis. In vitae ex
-          suscipit, vulputate mauris sed, bibendum ipsum. Nulla facilisi. Mauris
-          pharetra urna at quam condimentum aliquam. Integer pulvinar fringilla
-          lectus ut interdum. Aenean ut nibh faucibus, bibendum tellus at,
-          posuere nunc. Fusce iaculis augue a dolor molestie luctus et quis
-          velit. Ut a vestibulum leo. Sed ullamcorper blandit nisi vitae
-          placerat. Duis convallis augue eget aliquet porta. Aenean lorem magna,
-          tempor tincidunt mauris id, tempor tincidunt nunc. Nullam in lorem
-          volutpat, venenatis velit pulvinar, tempus nunc. Maecenas nec sagittis
-          magna, a pellentesque ligula. Suspendisse varius metus velit. Nullam
-          interdum feugiat risus, in commodo turpis dapibus ut. Etiam sodales et
-          nisi viverra dictum. Duis nisi felis, luctus eget tellus nec,
-          tristique aliquet tellus. Praesent quis mollis nisl. In interdum dui
-          orci, condimentum mollis velit sodales ut. Phasellus id nulla luctus,
-          pretium odio nec, finibus nibh. Vivamus ligula tellus, tempor vel
-          massa nec, pretium imperdiet magna. Nulla convallis nulla a mollis
-          ultrices. Nulla facilisi. Morbi id enim at risus condimentum facilisis
-          eget ut turpis. Donec mattis risus in tellus tincidunt, non ornare
-          ligula euismod. Mauris tristique arcu sit amet neque eleifend
-          pellentesque. Proin consectetur massa ac est pharetra tempor. Quisque
-          mollis, nisl at interdum commodo, turpis magna convallis leo, non
-          molestie eros tortor vel est. Curabitur vehicula lectus eget mi porta,
-          venenatis feugiat sem semper. Praesent iaculis erat odio, sit amet
-          laoreet libero feugiat eu. Suspendisse fringilla ligula libero, eu
-          malesuada velit convallis nec. Vestibulum hendrerit arcu justo, ut
-          mattis neque rutrum a. Morbi malesuada turpis turpis, eget ultricies
-          neque venenatis quis. Aenean vel egestas nulla. Sed ullamcorper
-          finibus placerat. Mauris imperdiet blandit arcu, eu placerat sem
-          convallis malesuada. Aliquam vitae cursus metus, eget lacinia arcu.
-          Mauris ornare dapibus maximus. Etiam sit amet arcu id lacus dignissim
-          tristique. Praesent lorem velit, ornare sit amet ornare non, mollis
-          quis enim. Nullam dapibus quam at lorem molestie facilisis. Maecenas
-          sit amet sapien id dui aliquet placerat. Etiam dictum nulla id pretium
-          efficitur. Maecenas venenatis pulvinar felis, quis euismod elit
-          tincidunt in. Ut nec nibh lacinia, ornare ex sed, malesuada lorem. In
-          ex dui, elementum in felis a, feugiat bibendum leo. Nulla eu feugiat
-          magna. Nullam suscipit nisl ut purus consequat sagittis. Sed venenatis
-          at mauris a lobortis. Suspendisse tempor sapien in sapien consequat
-          lacinia. Nunc non justo quis leo finibus faucibus. Vivamus eleifend
-          vehicula tellus id vulputate. Vestibulum eu ex vulputate, efficitur
-          nisi eu, egestas dolor.
+          sed, lacinia eu quam.
         </p>
       </div>
     </section>

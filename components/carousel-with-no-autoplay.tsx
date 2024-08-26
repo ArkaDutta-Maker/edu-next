@@ -6,17 +6,18 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import Autoplay from "embla-carousel-autoplay";
 import { useState, useEffect } from "react";
 
-export default function CarouselCustom({
+export default function CarouselCustomNoAutoplay({
   children,
   count,
-  val,
+  showArrows_val,
+  loop_val,
 }: {
   children: React.ReactNode;
   count: number;
-  val: number;
+  showArrows_val: boolean;
+  loop_val: boolean;
 }) {
   const [showArrows, setShowArrows] = useState(true);
   const checkScreenSize = () => {
@@ -37,8 +38,7 @@ export default function CarouselCustom({
   return (
     <Carousel
       className="-mx-3 md:mx-auto"
-      opts={{ align: "start", loop: true }}
-      plugins={[Autoplay({ delay: val })]}
+      opts={{ align: "center", loop: loop_val }}
     >
       <CarouselContent className="p-2 m-auto">
         {Array.from({ length: count }).map((_, i) => (
@@ -47,7 +47,7 @@ export default function CarouselCustom({
           </CarouselItem>
         ))}
       </CarouselContent>
-      {showArrows && (
+      {showArrows && showArrows_val && (
         <>
           <CarouselPrevious />
           <CarouselNext />
