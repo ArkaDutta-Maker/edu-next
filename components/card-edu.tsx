@@ -6,7 +6,7 @@ import { Link } from "@nextui-org/link";
 import { Divider } from "@nextui-org/divider";
 export const Card_Edu = () => {
   return (
-    <Card className="max-w-[400px]">
+    <Card className="shadow-md">
       <CardHeader className="flex gap-3">
         <Image
           alt="nextui logo"

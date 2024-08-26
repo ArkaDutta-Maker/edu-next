@@ -33,10 +33,14 @@ export default function CarouselCustom({
   }, []);
 
   return (
-    <Carousel plugins={[Autoplay({ delay: 1000 })]}>
-      <CarouselContent className="-ml-4">
+    <Carousel
+      className="-mx-3 md:mx-auto"
+      opts={{ align: "start", loop: true }}
+      plugins={[Autoplay({ delay: 2000 })]}
+    >
+      <CarouselContent className="p-2 m-auto">
         {Array.from({ length: count }).map((_, i) => (
-          <CarouselItem key={i} className="pl-4 md:basis-1/2 lg:basis-1/3">
+          <CarouselItem key={i} className="ml-3 md:basis-1/2 lg:basis-1/3">
             {children}
           </CarouselItem>
         ))}
