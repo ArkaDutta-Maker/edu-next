@@ -7,14 +7,14 @@ import { Divider } from "@nextui-org/divider";
 import { Button } from "@nextui-org/button";
 export const Card_Edu = () => {
   return (
-    <Card className="shadow-md">
+    <Card>
       <CardHeader className="flex gap-3">
         <Image
           alt="nextui logo"
-          height={40}
+          height={50}
           radius="sm"
           src="https://avatars.githubusercontent.com/u/86160567?s=200&v=4"
-          width={40}
+          width={50}
         />
         <div className="flex flex-col">
           <p className="text-md">Lorem Ipsum</p>
@@ -33,10 +33,22 @@ export const Card_Edu = () => {
       <Divider />
       <CardFooter>
         <div className="flex justify-between items-center gap-3 w-full">
-          <Button isExternal as={Link} color="primary" href="/1" size="md">
+          <Button
+            isExternal
+            as={Link}
+            color="primary"
+            variant="flat"
+            href="/#"
+            size="md"
+          >
             Apply Now!
           </Button>
-          <Link showAnchorIcon href="/#">
+          <Link
+            showAnchorIcon
+            href="/#"
+            color="foreground"
+            className="text-gray-400 dark:text-gray-300"
+          >
             Course Details
           </Link>
         </div>

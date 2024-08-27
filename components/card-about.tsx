@@ -5,7 +5,7 @@ import { Image } from "@nextui-org/image";
 import { Divider } from "@nextui-org/divider";
 export const Card_About = () => {
   return (
-    <Card className="shadow-md">
+    <Card>
       <CardBody className="overflow-visible py-2">
         <div className="flex items-center justify-center">
           <Image
@@ -25,7 +25,7 @@ export const Card_About = () => {
       <Divider />
       <Divider />
       <CardFooter>
-        <p className="m-3 text-justify">
+        <p className="m-3 text-center font-mono text-gray-600 dark:text-gray-400">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
           tincidunt pretium convallis. Vestibulum in odio tortor. Pellentesque a
           ipsum nunc.

@@ -21,7 +21,7 @@ export const title = tv({
       true: "w-full block",
     },
     underline: {
-      true: "underline underline-offset-4 decoration-4 decoration-[#b249f6]",
+      true: "underline underline-offset-4 decoration-4 decoration-sky-300 dark:decoration-sky-500",
     },
   },
   defaultVariants: {

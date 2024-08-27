@@ -14,10 +14,14 @@ export default function Home() {
     <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
       <div className="inline-block max-w-xl text-center justify-center">
         <h1 className={title()}>Edu&nbsp;</h1>
-        <h1 className={title({ color: "violet" })}>Next&nbsp;</h1>
+        <h1 className={title({ color: "blue" })}>Next&nbsp;</h1>
         <br />
         <h1 className={title()}>The Next Level of Education</h1>
-        <h2 className={subtitle({ class: "mt-4" })}>
+        <h2
+          className={subtitle({
+            class: "mt-4 text-gray-400 dark:text-gray-400",
+          })}
+        >
           Innovative, intruiging, and interactive learning platform
         </h2>
       </div>
@@ -27,12 +31,16 @@ export default function Home() {
       <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
       <div className="flex flex-col items-center justify-center">
         {" "}
-        <h1 className={title({ color: "violet", underline: true })}>
+        <h1 className={title({ color: "blue", underline: true })}>
           {" "}
           Our Courses
         </h1>
-        <h2 className={subtitle({ class: "mt-4" })}>
-          Next Level Courses to take you to the next level
+        <h2
+          className={subtitle({
+            class: "ml-5 text-gray-400 dark:text-gray-400",
+          })}
+        >
+          Next Level Courses to take u Next level
         </h2>
       </div>
       <div className="container md:p-10">
@@ -48,11 +56,45 @@ export default function Home() {
       <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
       <div className="flex flex-col items-center justify-center">
         {" "}
-        <h1 className={title({ color: "violet", underline: true })}>
-          {" "}
+        <h1 className={title({ color: "blue", underline: true })}>Our Team</h1>
+        <h2
+          className={subtitle({
+            class: "mt-4 text-gray-400 dark:text-gray-400",
+          })}
+        >
+          Meet the team behind Edu-Next
+        </h2>
+      </div>
+      {/* About the team */}
+      <ResponsiveCardDiv />
+      <Button
+        isExternal
+        showAnchorIcon
+        as={Link}
+        color="primary"
+        className="mt-5"
+        href="/about"
+        size="lg"
+        variant="bordered"
+      >
+        View the Entire Team
+      </Button>
+      <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
+      <div className="flex flex-col items-center justify-center">
+        {" "}
+        <h1
+          className={title({
+            color: "blue",
+            underline: true,
+          })}
+        >
           Testimonials
         </h1>
-        <h2 className={subtitle({ class: "mt-4" })}>
+        <h2
+          className={subtitle({
+            class: "mt-4 text-gray-400 dark:text-gray-400",
+          })}
+        >
           What Our students have to say
         </h2>
       </div>
@@ -65,42 +107,23 @@ export default function Home() {
         isExternal
         showAnchorIcon
         as={Link}
-        color="secondary"
+        color="primary"
+        className="my-4"
         href="/#"
         size="lg"
-        variant="ghost"
+        variant="bordered"
       >
         View More Success Stories
       </Button>
       <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
       <div className="flex flex-col items-center justify-center">
         {" "}
-        <h1 className={title({ color: "violet", underline: true })}>
-          {" "}
-          Our Team
-        </h1>
-        <h2 className={subtitle({ class: "mt-4" })}>
-          Meet the team behind Edu-Next
-        </h2>
-      </div>
-      {/* About the team */}
-      <ResponsiveCardDiv />
-      <Button
-        isExternal
-        showAnchorIcon
-        as={Link}
-        color="secondary"
-        href="/about"
-        size="lg"
-        variant="ghost"
-      >
-        View the Entire Team
-      </Button>
-      <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
-      <div className="flex flex-col items-center justify-center">
-        {" "}
-        <h2 className={title({ color: "violet", underline: true })}> FAQ</h2>
-        <h2 className={subtitle({ class: "mt-4" })}>
+        <h1 className={title({ color: "blue", underline: true })}> FAQ</h1>
+        <h2
+          className={subtitle({
+            class: "mt-4 text-gray-400 dark:text-gray-400",
+          })}
+        >
           Frequently Asked Questions
         </h2>
       </div>{" "}

@@ -5,14 +5,12 @@ import { Image } from "@nextui-org/image";
 import { Divider } from "@nextui-org/divider";
 export const Card_Test = () => {
   return (
-    <Card className="shadow-md">
+    <Card className="rounded-small">
       <CardBody className="overflow-visible py-2">
-        <p className="m-3 text-justify">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-          tincidunt pretium convallis. Vestibulum in odio tortor. Pellentesque a
-          ipsum nunc. Interdum et malesuada fames ac ante ipsum primis in
-          faucibus. Ut ut commodo massa. Mauris at purus feugiat erat pretium
-          volutpat at egestas sapien. Lorem ipsum dolor sit amet, consectetur.
+        <p className="text-center m-3 text-gray-600 dark:text-gray-400">
+          My team and I enjoy interviewing candidates from Scaler because of the
+          skills they possess and also the approach taken by Scaler towards the
+          training process itself.
         </p>
       </CardBody>
 
@@ -23,13 +21,18 @@ export const Card_Test = () => {
           <Image
             alt="pf icon"
             className="object-fill rounded-medium"
-            height={40}
-            src="https://avatars.githubusercontent.com/u/86160567?s=200&v=4"
-            width={40}
+            height={80}
+            src="https://assets.fp.scaler.com/seo/_next/static/media/Rajasekhar%20-%20ExpressBee.18bb8bdf.webp"
+            width={80}
           />
           <div className="flex flex-col">
-            <span className="text-lg">Lorem Ipsum </span>
-            <span className="text-gray-400 text-sm">Lorem Ipsum </span>
+            <span className="text-lg font-bold">Lorem Ipsum </span>
+            <span className="text-gray-400 text-md font-light">
+              Lorem Ipsum{" "}
+            </span>
+            <span className="text-gray-400 text-sm font-light">
+              Lorem Ipsum{" "}
+            </span>
           </div>
         </div>
       </CardFooter>

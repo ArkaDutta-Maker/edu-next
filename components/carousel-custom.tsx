@@ -9,6 +9,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { buttonVariants } from "./ui/button";
 
 export default function CarouselCustom({
   children,

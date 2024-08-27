@@ -16,8 +16,8 @@ const DialogChat = () => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button color="primary" size="lg">
-          Chat With Us
+        <Button color="primary" variant="bordered" size="lg">
+          <span className="text-blue-500 dark:text-blue-400">Chat With Us</span>
         </Button>
       </DialogTrigger>
       <DialogContent className="items-start sm:max-w-[425px]">

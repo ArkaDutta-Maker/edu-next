@@ -21,8 +21,8 @@ export const siteConfig = {
       href: "/courses",
     },
     {
-      label: "Pricing",
-      href: "/pricing",
+      label: "Topper's Talk",
+      href: "/Topper's_Talk",
     },
   ],
   navMenuItems: [
@@ -43,8 +43,8 @@ export const siteConfig = {
       href: "/courses",
     },
     {
-      label: "Pricing",
-      href: "/pricing",
+      label: "Topper's Talk",
+      href: "/Topper's_Talk",
     },
   ],
   links: {

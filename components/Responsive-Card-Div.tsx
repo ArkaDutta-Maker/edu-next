@@ -30,7 +30,7 @@ const ResponsiveCardDiv = () => {
       </CarouselCustom>
     </div>
   ) : (
-    <div className="flex justify-between gap-3">
+    <div className="mt-10 flex justify-between gap-3">
       <div className="ml-8 md:basis-1/2 lg:basis-1/4">
         <Card_About />
       </div>

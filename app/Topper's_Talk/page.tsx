@@ -57,7 +57,7 @@ export default function PricingPage() {
   return (
     <div className="container">
       <div className="text-center">
-        <h1 className={title()}>Pricing</h1>
+        <h1 className={title()}>Topper's Talk</h1>
       </div>
       <p className="mt-5 text-wrap">{text}</p>
     </div>
