@@ -14,7 +14,9 @@ export default function Home() {
     <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
       <div className="inline-block max-w-xl text-center justify-center">
         <h1 className={title()}>Edu&nbsp;</h1>
-        <h1 className={title({ color: "blue" })}>Next&nbsp;</h1>
+        <h1 className={title({ color: "blue", underline: true })}>
+          Next&nbsp;
+        </h1>
         <br />
         <h1 className={title()}>The Next Level of Education</h1>
         <h2
@@ -31,10 +33,7 @@ export default function Home() {
       <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
       <div className="flex flex-col items-center justify-center">
         {" "}
-        <h1 className={title({ color: "blue", underline: true })}>
-          {" "}
-          Our Courses
-        </h1>
+        <h1 className={title({ color: "blue" })}> Our Courses</h1>
         <h2
           className={subtitle({
             class: "ml-5 text-gray-400 dark:text-gray-400",
@@ -56,7 +55,7 @@ export default function Home() {
       <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
       <div className="flex flex-col items-center justify-center">
         {" "}
-        <h1 className={title({ color: "blue", underline: true })}>Our Team</h1>
+        <h1 className={title({ color: "violet" })}>Our Team</h1>
         <h2
           className={subtitle({
             class: "mt-4 text-gray-400 dark:text-gray-400",
@@ -71,7 +70,7 @@ export default function Home() {
         isExternal
         showAnchorIcon
         as={Link}
-        color="primary"
+        color="secondary"
         className="mt-5"
         href="/about"
         size="lg"
@@ -85,7 +84,6 @@ export default function Home() {
         <h1
           className={title({
             color: "blue",
-            underline: true,
           })}
         >
           Testimonials
@@ -118,7 +116,7 @@ export default function Home() {
       <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
       <div className="flex flex-col items-center justify-center">
         {" "}
-        <h1 className={title({ color: "blue", underline: true })}> FAQ</h1>
+        <h1 className={title({ color: "violet" })}> FAQ</h1>
         <h2
           className={subtitle({
             class: "mt-4 text-gray-400 dark:text-gray-400",

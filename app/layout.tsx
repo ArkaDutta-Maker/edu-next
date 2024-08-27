@@ -7,7 +7,7 @@ import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
-
+import { FaYoutube, FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa";
 import { Providers } from "./providers";
 
 export const metadata: Metadata = {
@@ -91,13 +91,29 @@ export default function RootLayout({
                   </ul>
                 </div>
                 <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-                <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">
-                  © 2023{" "}
-                  <Link className="hover:underline" href="/">
-                    Edu-Next™
-                  </Link>
-                  . All Rights Reserved.
-                </span>
+                <div className="sm:flex sm:items-center sm:justify-between">
+                  <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">
+                    © 2023{" "}
+                    <Link className="hover:underline" href="/">
+                      Edu-Next™
+                    </Link>
+                    . All Rights Reserved.
+                  </span>
+                  <div className="flex mt-4 sm:justify-center gap-5 ml-3 sm:mx-0">
+                    <Link href="/#" className="-ml-3">
+                      <FaYoutube size={"1.5em"} color={"red"} />
+                    </Link>
+                    <Link href="/#">
+                      <FaInstagram size={"1.5em"} />
+                    </Link>
+                    <Link href="/#">
+                      <FaFacebook size={"1.5em"} />
+                    </Link>
+                    <Link href="/#">
+                      <FaTwitter size={"1.5em"} />
+                    </Link>
+                  </div>
+                </div>
               </div>
             </footer>
           </div>

@@ -18,7 +18,9 @@ import { usePathname } from "next/navigation";
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
 import { SearchIcon } from "@/components/icons";
-
+import { FaYoutube, FaInstagram, FaTwitter, FaFacebook } from "react-icons/fa";
+import { Library } from "lucide-react";
+import { Button } from "@nextui-org/button";
 export const Navbar = () => {
   const searchInput = (
     <Input
@@ -43,7 +45,7 @@ export const Navbar = () => {
 
   const [isMenuOpen, setIsMenuOpen] = React.useReducer(
     (current) => !current,
-    false,
+    false
   );
   const pathname = usePathname();
 
@@ -106,16 +108,31 @@ export const Navbar = () => {
           <ThemeSwitch />
         </NavbarItem>
         <NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem>
+        <NavbarItem className="hidden lg:flex gap-5">
+          <Link href="/#">
+            <FaYoutube size={"1.5em"} color={"red"} />
+          </Link>
+          <a href="/#">
+            <FaInstagram size={"1.5em"} />
+          </a>
+          <Link href="/#">
+            <FaFacebook size={"1.5em"} />
+          </Link>
+          <Link href="/#">
+            <FaTwitter size={"1.5em"} />
+          </Link>
+        </NavbarItem>
       </NavbarContent>
 
       <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
         <ThemeSwitch />
+
         <NavbarMenuToggle />
       </NavbarContent>
+      <NavbarMenu className="grid ">
+        <div className="items-start">{searchInput}</div>
 
-      <NavbarMenu>
-        {searchInput}
-        <div className="mx-4 mt-2 flex flex-col gap-2">
+        <div className="mx-4 flex flex-col gap-2 items-start">
           {siteConfig.navMenuItems.map((item, index) => (
             <NavbarMenuItem key={`${item}-${index}`}>
               <Link
@@ -129,6 +146,20 @@ export const Navbar = () => {
               </Link>
             </NavbarMenuItem>
           ))}
+        </div>
+        <div className="m-10 flex flex-row justify-between">
+          <Link href="/#" className="-ml-3">
+            <FaYoutube size={"1.5em"} color={"red"} />
+          </Link>
+          <Link href="/#">
+            <FaInstagram size={"1.5em"} />
+          </Link>
+          <Link href="/#">
+            <FaFacebook size={"1.5em"} />
+          </Link>
+          <Link href="/#">
+            <FaTwitter size={"1.5em"} />
+          </Link>
         </div>
       </NavbarMenu>
     </NextUINavbar>
