@@ -21,7 +21,9 @@ const ResponsiveCardDiv = () => {
   }, []);
   return showCarousel ? (
     <div className="container md:p-10">
-      <CarouselCustom children={<Card_About />} count={5} val={2000} />
+      <CarouselCustom count={5} val={2000}>
+        <Card_About />
+      </CarouselCustom>
     </div>
   ) : (
     <div className="flex justify-between gap-3">

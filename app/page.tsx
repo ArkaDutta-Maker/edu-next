@@ -44,11 +44,13 @@ export default function Home() {
       </div>
       <div className="container md:p-10">
         <CarouselCustomNoAutoplay
-          children={<Card_Edu />}
           count={5}
           showArrows_val={true}
           loop_val={true}
-        />
+        >
+          {" "}
+          <Card_Edu />
+        </CarouselCustomNoAutoplay>
       </div>
       <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
       <div className="flex flex-col items-center justify-center">
@@ -62,7 +64,9 @@ export default function Home() {
         </h2>
       </div>
       <div className="container md:p-10">
-        <CarouselCustom children={<Card_Test />} val={2000} count={5} />
+        <CarouselCustom val={2000} count={5}>
+          <Card_Test />
+        </CarouselCustom>
       </div>
       <Button
         as={Link}
