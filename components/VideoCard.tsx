@@ -6,12 +6,12 @@ export default function CarouselCustom({ link }: { link: string }) {
       <CardBody className="overflow-visible py-2">
         <div className="max-w-sm">
           <iframe
-            allowfullscreen
+            allowFullScreen
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             className="w-full rounded-lg"
-            frameborder="0"
+            frameBorder="0"
             height="200"
-            referrerpolicy="strict-origin-when-cross-origin"
+            referrerPolicy="strict-origin-when-cross-origin"
             src={link}
             title="YouTube video player"
             width="100%"
