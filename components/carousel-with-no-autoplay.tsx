@@ -7,7 +7,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { useState, useEffect } from "react";
-
+// import Autoplay from "embla-carousel-autoplay";
 export default function CarouselCustomNoAutoplay({
   children,
   count,

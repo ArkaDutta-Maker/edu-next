@@ -67,7 +67,6 @@ export const Navbar = () => {
       //   ],
       // }}
       maxWidth="xl"
-      position="sticky"
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
       isBordered

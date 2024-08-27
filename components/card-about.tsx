@@ -30,9 +30,7 @@ export const Card_About = () => {
         <p className="m-3 text-justify">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
           tincidunt pretium convallis. Vestibulum in odio tortor. Pellentesque a
-          ipsum nunc. Interdum et malesuada fames ac ante ipsum primis in
-          faucibus. Ut ut commodo massa. Mauris at purus feugiat erat pretium
-          volutpat at egestas sapien. Lorem ipsum dolor sit amet, consectetur.
+          ipsum nunc.
         </p>
       </CardFooter>
     </Card>

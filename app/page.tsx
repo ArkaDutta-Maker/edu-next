@@ -13,18 +13,9 @@ import CarouselCustomNoAutoplay from "@/components/carousel-with-no-autoplay";
 import { color } from "framer-motion";
 import { Card_Test } from "@/components/card-testimonial";
 import { Button } from "@nextui-org/button";
-import { Card_About } from "@/components/card-about";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+import ResponsiveCardDiv from "@/components/Responsive-Card-Div";
+import DialogChat from "@/components/Dialog-Chat";
+import AccordionCustom from "@/components/Accordion-Custom";
 export default function Home() {
   return (
     <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
@@ -38,46 +29,7 @@ export default function Home() {
         </h2>
       </div>
       <div className="my-3 justify-start">
-        <Dialog>
-          <DialogTrigger asChild>
-            <Button color="primary" size="lg">
-              Chat With Us
-            </Button>
-          </DialogTrigger>
-          <DialogContent className="items-start sm:max-w-[425px]">
-            <DialogHeader>
-              <DialogTitle>Chat With Us</DialogTitle>
-              <DialogDescription>
-                Enter your details and we will get back to you
-              </DialogDescription>
-            </DialogHeader>
-            <div className="grid gap-4 py-4">
-              <div className="grid grid-cols-4 items-center gap-4">
-                <Label htmlFor="name" className="text-right">
-                  Name
-                </Label>
-                <Input
-                  id="name"
-                  className="col-span-3"
-                  placeholder="Enter your Name"
-                />
-              </div>
-              <div className="grid grid-cols-4 items-center gap-4">
-                <Label htmlFor="username" className="text-right">
-                  Email Address
-                </Label>
-                <Input
-                  id="username"
-                  className="col-span-3"
-                  placeholder="Enter your Email Address"
-                />
-              </div>
-            </div>
-            <DialogFooter>
-              <Button type="submit">Save changes</Button>
-            </DialogFooter>
-          </DialogContent>
-        </Dialog>
+        <DialogChat />
       </div>
       <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
       <div className="flex flex-col items-center justify-center">
@@ -134,16 +86,21 @@ export default function Home() {
           Meet the team behind Edu-Next
         </h2>
       </div>
-      <div className="container md:mx-3 scale-96">
-        <CarouselCustomNoAutoplay
-          children={<Card_About />}
-          count={3}
-          showArrows_val={false}
-          loop_val={true}
-        />
+      {/* About the team */}
+      <ResponsiveCardDiv />
+      <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
+      <div className="flex flex-col items-center justify-center">
+        {" "}
+        <h2 className={title({ color: "violet", underline: true })}> FAQ</h2>
+        <h2 className={subtitle({ class: "mt-4" })}>
+          Frequently Asked Questions
+        </h2>
+      </div>{" "}
+      <div className="container md:pl-8">
+        <AccordionCustom />
       </div>
       <div className="container md:mx-3">
-        <p className="ml-4 md:ml-9 text-justify ">
+        <p className="md:ml-9 text-justify ">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
           dignissim velit in auctor scelerisque. Mauris ullamcorper, quam at
           convallis faucibus, magna augue commodo urna, id volutpat tellus ante
