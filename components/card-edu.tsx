@@ -37,17 +37,17 @@ export const Card_Edu = () => {
             isExternal
             as={Link}
             color="primary"
-            variant="flat"
             href="/#"
             size="md"
+            variant="flat"
           >
             Apply Now!
           </Button>
           <Link
             showAnchorIcon
-            href="/#"
-            color="foreground"
             className="text-gray-400 dark:text-gray-300"
+            color="foreground"
+            href="/#"
           >
             Course Details
           </Link>

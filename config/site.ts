@@ -22,7 +22,7 @@ export const siteConfig = {
     },
     {
       label: "Topper's Talk",
-      href: "/Topper's_Talk",
+      href: "/topper",
     },
   ],
   navMenuItems: [
@@ -44,7 +44,7 @@ export const siteConfig = {
     },
     {
       label: "Topper's Talk",
-      href: "/Topper's_Talk",
+      href: "/topper",
     },
   ],
   links: {

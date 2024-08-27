@@ -70,8 +70,8 @@ export default function Home() {
         isExternal
         showAnchorIcon
         as={Link}
-        color="secondary"
         className="mt-5"
+        color="secondary"
         href="/about"
         size="lg"
         variant="bordered"
@@ -105,8 +105,8 @@ export default function Home() {
         isExternal
         showAnchorIcon
         as={Link}
-        color="primary"
         className="my-4"
+        color="primary"
         href="/#"
         size="lg"
         variant="bordered"

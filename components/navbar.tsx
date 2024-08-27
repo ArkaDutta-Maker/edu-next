@@ -14,13 +14,11 @@ import { Input } from "@nextui-org/input";
 import NextLink from "next/link";
 import React from "react";
 import { usePathname } from "next/navigation";
+import { FaYoutube, FaInstagram, FaTwitter, FaFacebook } from "react-icons/fa";
 
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
 import { SearchIcon } from "@/components/icons";
-import { FaYoutube, FaInstagram, FaTwitter, FaFacebook } from "react-icons/fa";
-import { Library } from "lucide-react";
-import { Button } from "@nextui-org/button";
 export const Navbar = () => {
   const searchInput = (
     <Input
@@ -45,7 +43,7 @@ export const Navbar = () => {
 
   const [isMenuOpen, setIsMenuOpen] = React.useReducer(
     (current) => !current,
-    false
+    false,
   );
   const pathname = usePathname();
 
@@ -110,7 +108,7 @@ export const Navbar = () => {
         <NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem>
         <NavbarItem className="hidden lg:flex gap-5">
           <Link href="/#">
-            <FaYoutube size={"1.5em"} color={"red"} />
+            <FaYoutube color={"red"} size={"1.5em"} />
           </Link>
           <a href="/#">
             <FaInstagram size={"1.5em"} />
@@ -148,8 +146,8 @@ export const Navbar = () => {
           ))}
         </div>
         <div className="m-10 flex flex-row justify-between">
-          <Link href="/#" className="-ml-3">
-            <FaYoutube size={"1.5em"} color={"red"} />
+          <Link className="-ml-3" href="/#">
+            <FaYoutube color={"red"} size={"1.5em"} />
           </Link>
           <Link href="/#">
             <FaInstagram size={"1.5em"} />

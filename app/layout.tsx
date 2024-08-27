@@ -3,11 +3,12 @@ import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
 import clsx from "clsx";
 import Link from "next/link";
+import { FaYoutube, FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa";
 
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
-import { FaYoutube, FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa";
+
 import { Providers } from "./providers";
 
 export const metadata: Metadata = {
@@ -39,7 +40,7 @@ export default function RootLayout({
       <body
         className={clsx(
           "min-h-screen bg-background font-sans antialiased",
-          fontSans.variable
+          fontSans.variable,
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
@@ -100,8 +101,8 @@ export default function RootLayout({
                     . All Rights Reserved.
                   </span>
                   <div className="flex mt-4 sm:justify-center gap-5 ml-3 sm:mx-0">
-                    <Link href="/#" className="-ml-3">
-                      <FaYoutube size={"1.5em"} color={"red"} />
+                    <Link className="-ml-3" href="/#">
+                      <FaYoutube color={"red"} size={"1.5em"} />
                     </Link>
                     <Link href="/#">
                       <FaInstagram size={"1.5em"} />
