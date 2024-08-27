@@ -55,11 +55,11 @@ export default function PricingPage() {
   vulputate. Vestibulum eu ex vulputate, efficitur nisi eu, egestas dolor.`;
 
   return (
-    <div>
+    <div className="container">
       <div className="text-center">
         <h1 className={title()}>Pricing</h1>
       </div>
-      <p className="pt-5">{text}</p>
+      <p className="mt-5 text-wrap">{text}</p>
     </div>
   );
 }

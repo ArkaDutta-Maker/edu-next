@@ -94,7 +94,7 @@ export default function RootLayout({
                 <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">
                   © 2023{" "}
                   <Link className="hover:underline" href="/">
-                    Flowbite™
+                    Edu-Next™
                   </Link>
                   . All Rights Reserved.
                 </span>
