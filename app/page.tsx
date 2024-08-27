@@ -88,6 +88,17 @@ export default function Home() {
       </div>
       {/* About the team */}
       <ResponsiveCardDiv />
+      <Button
+        as={Link}
+        color="secondary"
+        size="lg"
+        showAnchorIcon
+        isExternal
+        variant="ghost"
+        href="/about"
+      >
+        View the Entire Team
+      </Button>
       <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
       <div className="flex flex-col items-center justify-center">
         {" "}
