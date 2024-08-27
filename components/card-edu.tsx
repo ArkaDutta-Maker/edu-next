@@ -33,7 +33,7 @@ export const Card_Edu = () => {
       <Divider />
       <CardFooter>
         <div className="flex justify-between items-center gap-3 w-full">
-          <Button color="primary" size="md" as={Link} href="/1" isExternal>
+          <Button isExternal as={Link} color="primary" href="/1" size="md">
             Apply Now!
           </Button>
           <Link showAnchorIcon href="/#">

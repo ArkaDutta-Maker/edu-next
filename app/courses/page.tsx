@@ -53,6 +53,7 @@ export default function DocsPage() {
   lobortis. Suspendisse tempor sapien in sapien consequat lacinia. Nunc
   non justo quis leo finibus faucibus. Vivamus eleifend vehicula tellus id
   vulputate. Vestibulum eu ex vulputate, efficitur nisi eu, egestas dolor.`;
+
   return (
     <div>
       <div className="text-center">

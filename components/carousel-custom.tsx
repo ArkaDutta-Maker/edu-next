@@ -1,4 +1,7 @@
 "use client";
+import Autoplay from "embla-carousel-autoplay";
+import { useState, useEffect } from "react";
+
 import {
   Carousel,
   CarouselContent,
@@ -6,8 +9,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import Autoplay from "embla-carousel-autoplay";
-import { useState, useEffect } from "react";
 
 export default function CarouselCustom({
   children,
@@ -26,9 +27,11 @@ export default function CarouselCustom({
       setShowArrows(true); // Show arrows on larger screens
     }
   };
+
   useEffect(() => {
     checkScreenSize();
     window.addEventListener("resize", checkScreenSize);
+
     return () => {
       window.removeEventListener("resize", checkScreenSize); // Clean up listener
     };

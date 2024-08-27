@@ -1,18 +1,11 @@
 import { Link } from "@nextui-org/link";
-import { Snippet } from "@nextui-org/snippet";
-import { Code } from "@nextui-org/code";
-import { button as buttonStyles } from "@nextui-org/theme";
+import { Button } from "@nextui-org/button";
 
-import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
-import { GithubIcon } from "@/components/icons";
 import { Card_Edu } from "@/components/card-edu";
-import Image from "next/image";
 import CarouselCustom from "@/components/carousel-custom";
 import CarouselCustomNoAutoplay from "@/components/carousel-with-no-autoplay";
-import { color } from "framer-motion";
 import { Card_Test } from "@/components/card-testimonial";
-import { Button } from "@nextui-org/button";
 import ResponsiveCardDiv from "@/components/Responsive-Card-Div";
 import DialogChat from "@/components/Dialog-Chat";
 import AccordionCustom from "@/components/Accordion-Custom";
@@ -31,7 +24,7 @@ export default function Home() {
       <div className="my-3 justify-start">
         <DialogChat />
       </div>
-      <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
+      <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
       <div className="flex flex-col items-center justify-center">
         {" "}
         <h1 className={title({ color: "violet", underline: true })}>
@@ -45,14 +38,14 @@ export default function Home() {
       <div className="container md:p-10">
         <CarouselCustomNoAutoplay
           count={5}
-          showArrows_val={true}
           loop_val={true}
+          showArrows_val={true}
         >
           {" "}
           <Card_Edu />
         </CarouselCustomNoAutoplay>
       </div>
-      <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
+      <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
       <div className="flex flex-col items-center justify-center">
         {" "}
         <h1 className={title({ color: "violet", underline: true })}>
@@ -64,22 +57,22 @@ export default function Home() {
         </h2>
       </div>
       <div className="container md:p-10">
-        <CarouselCustom val={2000} count={5}>
+        <CarouselCustom count={5} val={2000}>
           <Card_Test />
         </CarouselCustom>
       </div>
       <Button
+        isExternal
+        showAnchorIcon
         as={Link}
         color="secondary"
-        size="lg"
-        showAnchorIcon
-        isExternal
-        variant="ghost"
         href="/#"
+        size="lg"
+        variant="ghost"
       >
         View More Success Stories
       </Button>
-      <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
+      <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
       <div className="flex flex-col items-center justify-center">
         {" "}
         <h1 className={title({ color: "violet", underline: true })}>
@@ -93,17 +86,17 @@ export default function Home() {
       {/* About the team */}
       <ResponsiveCardDiv />
       <Button
+        isExternal
+        showAnchorIcon
         as={Link}
         color="secondary"
-        size="lg"
-        showAnchorIcon
-        isExternal
-        variant="ghost"
         href="/about"
+        size="lg"
+        variant="ghost"
       >
         View the Entire Team
       </Button>
-      <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
+      <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
       <div className="flex flex-col items-center justify-center">
         {" "}
         <h2 className={title({ color: "violet", underline: true })}> FAQ</h2>

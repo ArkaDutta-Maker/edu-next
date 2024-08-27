@@ -1,21 +1,19 @@
 "use client";
 import React from "react";
-import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/card";
+import { Card, CardBody, CardFooter } from "@nextui-org/card";
 import { Image } from "@nextui-org/image";
-import { Link } from "@nextui-org/link";
 import { Divider } from "@nextui-org/divider";
-import { Button } from "@nextui-org/button";
 export const Card_About = () => {
   return (
     <Card className="shadow-md">
       <CardBody className="overflow-visible py-2">
         <div className="flex items-center justify-center">
           <Image
+            alt="pf icon"
             className="object-fill rounded-full"
+            height={100}
             src="https://avatars.githubusercontent.com/u/86160567?s=200&v=4"
             width={100}
-            height={100}
-            alt="pf icon"
           />
         </div>
         <div className="flex flex-col items-center justify-center my-3">

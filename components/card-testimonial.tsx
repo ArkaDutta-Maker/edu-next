@@ -1,10 +1,8 @@
 "use client";
 import React from "react";
-import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/card";
+import { Card, CardBody, CardFooter } from "@nextui-org/card";
 import { Image } from "@nextui-org/image";
-import { Link } from "@nextui-org/link";
 import { Divider } from "@nextui-org/divider";
-import { Button } from "@nextui-org/button";
 export const Card_Test = () => {
   return (
     <Card className="shadow-md">
@@ -23,11 +21,11 @@ export const Card_Test = () => {
       <CardFooter>
         <div className="flex items-center w-full m-3 gap-3">
           <Image
+            alt="pf icon"
             className="object-fill rounded-medium"
+            height={40}
             src="https://avatars.githubusercontent.com/u/86160567?s=200&v=4"
             width={40}
-            height={40}
-            alt="pf icon"
           />
           <div className="flex flex-col">
             <span className="text-lg">Lorem Ipsum </span>

@@ -1,14 +1,14 @@
 import "@/styles/globals.css";
 
 import { Metadata, Viewport } from "next";
-import { Link } from "@nextui-org/link";
 import clsx from "clsx";
-
-import { Providers } from "./providers";
+import Link from "next/link";
 
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
+
+import { Providers } from "./providers";
 
 export const metadata: Metadata = {
   title: {
@@ -51,48 +51,51 @@ export default function RootLayout({
             <footer className="bg-gray-50 rounded-lg shadow-md dark:bg-gray-900">
               <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
                 <div className="sm:flex sm:items-center sm:justify-between">
-                  <a
-                    href="https://flowbite.com/"
+                  <Link
                     className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse"
+                    href="/"
                   >
                     <img
-                      src="https://flowbite.com/docs/images/logo.svg"
-                      className="h-8"
                       alt="Flowbite Logo"
+                      className="h-8"
+                      src="https://flowbite.com/docs/images/logo.svg"
                     />
                     <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
                       Edu-Next
                     </span>
-                  </a>
+                  </Link>
                   <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
                     <li>
-                      <a href="#" className="hover:underline me-4 md:me-6">
+                      <Link
+                        className="hover:underline me-4 md:me-6"
+                        href="/about"
+                      >
                         About
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="#" className="hover:underline me-4 md:me-6">
+                      <Link className="hover:underline me-4 md:me-6" href="/#">
                         Privacy Policy
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="#" className="hover:underline me-4 md:me-6">
+                      <Link className="hover:underline me-4 md:me-6" href="/#">
                         Licensing
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="#" className="hover:underline">
+                      <Link className="hover:underline" href="/#">
                         Contact
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </div>
                 <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
                 <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">
                   © 2023{" "}
-                  <a href="https://flowbite.com/" className="hover:underline">
+                  <Link className="hover:underline" href="/">
                     Flowbite™
-                  </a>
+                  </Link>
                   . All Rights Reserved.
                 </span>
               </div>

@@ -22,7 +22,7 @@ export const title = tv({
     },
     underline: {
       true: "underline underline-offset-4 decoration-4 decoration-[#b249f6]",
-    }
+    },
   },
   defaultVariants: {
     size: "md",

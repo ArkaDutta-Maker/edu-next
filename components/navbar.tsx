@@ -8,18 +8,16 @@ import {
   NavbarItem,
   NavbarMenuItem,
 } from "@nextui-org/navbar";
-import { Button } from "@nextui-org/button";
 import { Kbd } from "@nextui-org/kbd";
 import { Link } from "@nextui-org/link";
 import { Input } from "@nextui-org/input";
-import { link as linkStyles } from "@nextui-org/theme";
 import NextLink from "next/link";
-import clsx from "clsx";
-import { siteConfig } from "@/config/site";
-import { ThemeSwitch } from "@/components/theme-switch";
-import { TwitterIcon, SearchIcon, YtLogo, Logo } from "@/components/icons";
 import React from "react";
 import { usePathname } from "next/navigation";
+
+import { siteConfig } from "@/config/site";
+import { ThemeSwitch } from "@/components/theme-switch";
+import { SearchIcon } from "@/components/icons";
 
 export const Navbar = () => {
   const searchInput = (
@@ -45,9 +43,10 @@ export const Navbar = () => {
 
   const [isMenuOpen, setIsMenuOpen] = React.useReducer(
     (current) => !current,
-    false
+    false,
   );
   const pathname = usePathname();
+
   return (
     <NextUINavbar
       // classNames={{
@@ -66,16 +65,16 @@ export const Navbar = () => {
       //     "data-[active=true]:after:bg-primary",
       //   ],
       // }}
-      maxWidth="xl"
-      isMenuOpen={isMenuOpen}
-      onMenuOpenChange={setIsMenuOpen}
       isBordered
+      isMenuOpen={isMenuOpen}
+      maxWidth="xl"
+      onMenuOpenChange={setIsMenuOpen}
     >
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink
             className="flex justify-start items-center gap-1"
-            href="/"
+            href="/#"
             onClick={() => {
               if (isMenuOpen) setIsMenuOpen();
             }}
@@ -88,9 +87,9 @@ export const Navbar = () => {
           {siteConfig.navItems.map((item) => (
             <NavbarItem key={item.href}>
               <Link
+                className={`${pathname === item.href ? "text-sky-500 underline font-bold dark:text-sky-600" : ""}`}
                 color="foreground"
                 href={item.href}
-                className={`${pathname === item.href ? "text-sky-500 underline font-bold dark:text-sky-600" : ""}`}
               >
                 {item.label}
               </Link>
@@ -120,10 +119,10 @@ export const Navbar = () => {
           {siteConfig.navMenuItems.map((item, index) => (
             <NavbarMenuItem key={`${item}-${index}`}>
               <Link
+                className={`${pathname === item.href ? "text-sky-500 underline font-bold dark:text-sky-600" : ""}`}
                 color={"foreground"}
                 href={item.href}
                 size="lg"
-                className={`${pathname === item.href ? "text-sky-500 underline font-bold dark:text-sky-600" : ""}`}
                 onPress={() => setIsMenuOpen()}
               >
                 {item.label}

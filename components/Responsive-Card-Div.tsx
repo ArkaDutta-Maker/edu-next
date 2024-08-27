@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+
 import CarouselCustom from "./carousel-custom";
 import { Card_About } from "./card-about";
 const ResponsiveCardDiv = () => {
@@ -12,13 +13,16 @@ const ResponsiveCardDiv = () => {
       setShowCarousel(false);
     }
   };
+
   useEffect(() => {
     checkScreenSize();
     window.addEventListener("resize", checkScreenSize);
+
     return () => {
       window.removeEventListener("resize", checkScreenSize); // Clean up listener
     };
   }, []);
+
   return showCarousel ? (
     <div className="container md:p-10">
       <CarouselCustom count={5} val={2000}>

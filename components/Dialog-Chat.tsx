@@ -1,4 +1,5 @@
-import { Card_About } from "@/components/card-about";
+import { Button } from "@nextui-org/button";
+
 import {
   Dialog,
   DialogContent,
@@ -10,7 +11,7 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Button } from "@nextui-org/button";
+
 const DialogChat = () => {
   return (
     <Dialog>
@@ -28,22 +29,22 @@ const DialogChat = () => {
         </DialogHeader>
         <div className="grid gap-4 py-4">
           <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="name" className="text-right">
+            <Label className="text-right" htmlFor="name">
               Name
             </Label>
             <Input
-              id="name"
               className="col-span-3"
+              id="name"
               placeholder="Enter your Name"
             />
           </div>
           <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="username" className="text-right">
+            <Label className="text-right" htmlFor="username">
               Email Address
             </Label>
             <Input
-              id="username"
               className="col-span-3"
+              id="username"
               placeholder="Enter your Email Address"
             />
           </div>
