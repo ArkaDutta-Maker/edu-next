@@ -7,29 +7,36 @@ import CarouselCustom from "@/components/carousel-custom";
 import CarouselCustomNoAutoplay from "@/components/carousel-with-no-autoplay";
 import { Card_Test } from "@/components/card-testimonial";
 import ResponsiveCardDiv from "@/components/Responsive-Card-Div";
-import DialogChat from "@/components/Dialog-Chat";
+import FormCustom from "@/components/FormCustom";
 import AccordionCustom from "@/components/Accordion-Custom";
 export default function Home() {
   return (
-    <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-      <div className="inline-block max-w-xl text-center justify-center">
-        <h1 className={title()}>Edu&nbsp;</h1>
-        <h1 className={title({ color: "blue", underline: true })}>
-          Next&nbsp;
-        </h1>
-        <br />
-        <h1 className={title()}>The Next Level of Education</h1>
-        <h2
-          className={subtitle({
-            class: "mt-4 text-gray-400 dark:text-gray-400",
-          })}
-        >
-          Innovative, intruiging, and interactive learning platform
-        </h2>
+    <section className="flex flex-col items-center gap-4 py-8 md:py-10">
+      <div className="w-full flex flex-col lg:flex-row items-center pt-8 lg:pt-16">
+        {/* Left Side */}
+        <div className="inline-block max-w-xl text-center justify-center md:text-left ">
+          <h1 className={title()}>Edu&nbsp;</h1>
+          <h1 className={title({ color: "blue", underline: true })}>
+            Next&nbsp;
+          </h1>
+          <br />
+          <h1 className={title()}>The Next Level of Education</h1>
+          <h2
+            className={subtitle({
+              class: "mt-4 text-gray-400 dark:text-gray-400",
+            })}
+          >
+            Innovative, intruiging, and interactive learning platform
+          </h2>
+        </div>
+        {/* Right Side */}
+        <div className="justify-end lg:w-1/2 p-8 rounded-lg shadow-lg mt-8 lg:mt-0 dark:border-2 border-blue-500">
+          <FormCustom />
+        </div>
       </div>
-      <div className="my-3 justify-start">
-        <DialogChat />
-      </div>
+      <hr className="hidden md:block h-px my-9 bg-gray-200 border-0 dark:bg-gray-700" />
+      <hr className="hidden md:block h-px my-9 bg-gray-200 border-0 dark:bg-gray-700" />
+      <hr className="hidden sm:block h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
       <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
       <div className="flex flex-col items-center justify-center">
         {" "}

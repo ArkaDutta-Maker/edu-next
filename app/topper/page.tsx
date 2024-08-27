@@ -1,3 +1,4 @@
+import VideoCard from "@/components/VideoCard";
 import { title } from "@/components/primitives";
 
 export default function PricingPage() {
@@ -59,7 +60,14 @@ export default function PricingPage() {
       <div className="text-center">
         <h1 className={title()}>Topper's Talk</h1>
       </div>
-      <p className="mt-5 text-wrap">{text}</p>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+        <VideoCard link="https://www.youtube.com/embed/npnp--SSx_8?si=uXZxr1L19fsOT2nZ" />
+        <VideoCard link="https://www.youtube.com/embed/npnp--SSx_8?si=uXZxr1L19fsOT2nZ" />
+        <VideoCard link="https://www.youtube.com/embed/npnp--SSx_8?si=uXZxr1L19fsOT2nZ" />
+        <VideoCard link="https://www.youtube.com/embed/npnp--SSx_8?si=uXZxr1L19fsOT2nZ" />
+        <VideoCard link="https://www.youtube.com/embed/npnp--SSx_8?si=uXZxr1L19fsOT2nZ" />
+        <VideoCard link="https://www.youtube.com/embed/npnp--SSx_8?si=uXZxr1L19fsOT2nZ" />
+      </div>
     </div>
   );
 }

@@ -4,13 +4,13 @@ import { Metadata, Viewport } from "next";
 import clsx from "clsx";
 import Link from "next/link";
 import { FaYoutube, FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa";
+import Image from "next/image";
 
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
 
 import { Providers } from "./providers";
-
 export const metadata: Metadata = {
   title: {
     default: siteConfig.name,
@@ -56,10 +56,12 @@ export default function RootLayout({
                     className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse"
                     href="/"
                   >
-                    <img
+                    <Image
                       alt="Flowbite Logo"
-                      className="h-8"
-                      src="https://flowbite.com/docs/images/logo.svg"
+                      className="rounded-full h-8"
+                      height={32}
+                      src="/20240602_104028.jpg"
+                      width={32}
                     />
                     <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
                       Edu-Next
@@ -100,6 +102,15 @@ export default function RootLayout({
                     </Link>
                     . All Rights Reserved.
                   </span>
+                  <div className="flex mt-4 sm:justify-center gap-5 ml-3 sm:mx-0">
+                    <span className="text-sm text-gray-500 dark:text-gray-400">
+                      someone@gmail.com
+                    </span>
+
+                    <span className="text-sm text-gray-500 dark:text-gray-400">
+                      +91 xxxxxxxx
+                    </span>
+                  </div>
                   <div className="flex mt-4 sm:justify-center gap-5 ml-3 sm:mx-0">
                     <Link className="-ml-3" href="/#">
                       <FaYoutube color={"red"} size={"1.5em"} />

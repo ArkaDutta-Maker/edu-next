@@ -15,12 +15,14 @@ import NextLink from "next/link";
 import React from "react";
 import { usePathname } from "next/navigation";
 import { FaYoutube, FaInstagram, FaTwitter, FaFacebook } from "react-icons/fa";
+import { Image } from "@nextui-org/image";
 
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
 import { SearchIcon } from "@/components/icons";
 export const Navbar = () => {
   const searchInput = (
+    // <></>
     <Input
       aria-label="Search"
       classNames={{
@@ -35,7 +37,7 @@ export const Navbar = () => {
       labelPlacement="outside"
       placeholder="Search..."
       startContent={
-        <SearchIcon className="text-base text-default-400 pointer-events-none flex-shrink-0" />
+        <SearchIcon className="text-base text-default-400 pointer-events-none " />
       }
       type="search"
     />
@@ -70,8 +72,14 @@ export const Navbar = () => {
       maxWidth="xl"
       onMenuOpenChange={setIsMenuOpen}
     >
-      <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
+      <NavbarContent className="basis-1/5 sm:basis-full" justify="center">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
+          <Image
+            className="object-scale-down rounded-full"
+            height={45}
+            src="/20240602_104028.jpg"
+            width={45}
+          />
           <NextLink
             className="flex justify-start items-center gap-1"
             href="/#"
@@ -80,10 +88,15 @@ export const Navbar = () => {
             }}
           >
             {/* <Logo /> */}
+
             <p className="font-bold text-inherit">Edu-Next</p>
           </NextLink>
         </NavbarBrand>
-        <ul className="hidden lg:flex gap-4 justify-start ml-2">
+
+        <NavbarItem className="justify-start basis-1/6 hidden lg:flex">
+          {searchInput}
+        </NavbarItem>
+        <ul className="hidden lg:flex gap-4 mx-auto justify-center">
           {siteConfig.navItems.map((item) => (
             <NavbarItem key={item.href}>
               <Link
@@ -105,7 +118,6 @@ export const Navbar = () => {
         <NavbarItem className="hidden sm:flex gap-2">
           <ThemeSwitch />
         </NavbarItem>
-        <NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem>
         <NavbarItem className="hidden lg:flex gap-5">
           <Link href="/#">
             <FaYoutube color={"red"} size={"1.5em"} />
