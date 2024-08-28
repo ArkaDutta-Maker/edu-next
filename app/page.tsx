@@ -14,19 +14,29 @@ export default function Home() {
     <section className="flex flex-col items-center gap-4 py-8 md:py-10">
       <div className="w-full flex flex-col lg:flex-row items-center pt-8 lg:pt-16">
         {/* Left Side */}
-        <div className="inline-block max-w-xl text-center justify-center md:text-left ">
-          <h1 className={title()}>Edu&nbsp;</h1>
-          <h1 className={title({ color: "blue", underline: true })}>
-            Next&nbsp;
+        <div className="inline-block max-w-xl text-center justify-center ">
+          <h1
+            className={title({
+              class: "justify-center text-center",
+              color: "violet",
+            })}
+          >
+            Joddha&nbsp;
           </h1>
+          {/* <h1 className={title({ color: "blue", underline: true })}>
+            Next&nbsp;
+          </h1> */}
           <br />
-          <h1 className={title()}>The Next Level of Education</h1>
+          <h2 className={subtitle({ class: "text-gray text-center text-xl" })}>
+            WIN YOUR BATTLE WITH US
+          </h2>
           <h2
             className={subtitle({
               class: "mt-4 text-gray-400 dark:text-gray-400",
             })}
           >
-            Innovative, intruiging, and interactive learning platform
+            Joddha is an Educational Startup from Bengal, indeed for Bengal,
+            founded by Engineers & alumnus of Jadavpur University.{" "}
           </h2>
         </div>
         {/* Right Side */}

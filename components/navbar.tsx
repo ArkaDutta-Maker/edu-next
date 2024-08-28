@@ -14,7 +14,14 @@ import { Input } from "@nextui-org/input";
 import NextLink from "next/link";
 import React from "react";
 import { usePathname } from "next/navigation";
-import { FaYoutube, FaInstagram, FaTwitter, FaFacebook } from "react-icons/fa";
+import {
+  FaYoutube,
+  FaInstagram,
+  FaTwitter,
+  FaFacebook,
+  FaLinkedin,
+  FaTelegram,
+} from "react-icons/fa";
 import { Image } from "@nextui-org/image";
 
 import { siteConfig } from "@/config/site";
@@ -45,7 +52,7 @@ export const Navbar = () => {
 
   const [isMenuOpen, setIsMenuOpen] = React.useReducer(
     (current) => !current,
-    false,
+    false
   );
   const pathname = usePathname();
 
@@ -89,7 +96,7 @@ export const Navbar = () => {
           >
             {/* <Logo /> */}
 
-            <p className="font-bold text-inherit">Edu-Next</p>
+            <p className="font-bold text-inherit">Joddha</p>
           </NextLink>
         </NavbarBrand>
 
@@ -119,17 +126,21 @@ export const Navbar = () => {
           <ThemeSwitch />
         </NavbarItem>
         <NavbarItem className="hidden lg:flex gap-5">
-          <Link href="/#">
+          <Link href="https://www.youtube.com/@joddha_2024" isExternal>
             <FaYoutube color={"red"} size={"1.5em"} />
           </Link>
-          <a href="/#">
-            <FaInstagram size={"1.5em"} />
-          </a>
-          <Link href="/#">
+
+          <Link
+            href="https://www.facebook.com/people/joddha/61560580765808/?mibextid=ZbWKwL"
+            isExternal
+          >
             <FaFacebook size={"1.5em"} />
           </Link>
-          <Link href="/#">
-            <FaTwitter size={"1.5em"} />
+          <a href="https://t.me/+w0FBiVinp_BjZDM1/" target="__blank">
+            <FaTelegram size={"1.5em"} />
+          </a>
+          <Link href="https://www.linkedin.com/company/joddha/" isExternal>
+            <FaLinkedin size={"1.5em"} />
           </Link>
         </NavbarItem>
       </NavbarContent>
@@ -158,17 +169,21 @@ export const Navbar = () => {
           ))}
         </div>
         <div className="m-10 flex flex-row justify-between">
-          <Link className="-ml-3" href="/#">
+          <Link href="https://www.youtube.com/@joddha_2024" isExternal>
             <FaYoutube color={"red"} size={"1.5em"} />
           </Link>
-          <Link href="/#">
-            <FaInstagram size={"1.5em"} />
-          </Link>
-          <Link href="/#">
+
+          <Link
+            href="https://www.facebook.com/people/joddha/61560580765808/?mibextid=ZbWKwL"
+            isExternal
+          >
             <FaFacebook size={"1.5em"} />
           </Link>
-          <Link href="/#">
-            <FaTwitter size={"1.5em"} />
+          <Link href="https://t.me/+w0FBiVinp_BjZDM1/" isExternal>
+            <FaTelegram size={"1.5em"} />
+          </Link>
+          <Link href="https://www.linkedin.com/company/joddha/" isExternal>
+            <FaLinkedin size={"1.5em"} />
           </Link>
         </div>
       </NavbarMenu>

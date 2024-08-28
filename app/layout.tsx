@@ -3,7 +3,7 @@ import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
 import clsx from "clsx";
 import Link from "next/link";
-import { FaYoutube, FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa";
+import { FaYoutube, FaLinkedin, FaFacebook, FaTelegram } from "react-icons/fa";
 import Image from "next/image";
 
 import { siteConfig } from "@/config/site";
@@ -64,7 +64,7 @@ export default function RootLayout({
                       width={32}
                     />
                     <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                      Edu-Next
+                      Joddha{" "}
                     </span>
                   </Link>
                   <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
@@ -112,17 +112,27 @@ export default function RootLayout({
                     </span>
                   </div>
                   <div className="flex mt-4 sm:justify-center gap-5 ml-3 sm:mx-0">
-                    <Link className="-ml-3" href="/#">
+                    <Link
+                      href="https://www.youtube.com/@joddha_2024"
+                      target="__blank"
+                    >
                       <FaYoutube color={"red"} size={"1.5em"} />
                     </Link>
-                    <Link href="/#">
-                      <FaInstagram size={"1.5em"} />
-                    </Link>
-                    <Link href="/#">
+
+                    <Link
+                      href="https://www.facebook.com/people/joddha/61560580765808/?mibextid=ZbWKwL"
+                      target="__blank"
+                    >
                       <FaFacebook size={"1.5em"} />
                     </Link>
-                    <Link href="/#">
-                      <FaTwitter size={"1.5em"} />
+                    <a href="https://t.me/+w0FBiVinp_BjZDM1/" target="__blank">
+                      <FaTelegram size={"1.5em"} />
+                    </a>
+                    <Link
+                      href="https://www.linkedin.com/company/joddha/"
+                      target="__blank"
+                    >
+                      <FaLinkedin size={"1.5em"} />
                     </Link>
                   </div>
                 </div>
